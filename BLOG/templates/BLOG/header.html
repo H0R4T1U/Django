@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Locaș de cult</title>
+	<meta charset="utf-8" />
+	{% load staticfiles %}
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Smythe" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+	{% load staticfiles %}
+	<style type="text/css">
+		html,
+		body {
+		  height:100%
+		}
+		.titlu {
+		  text-align: center ;
+		  color: #2e282a ;
+		  font-family: Merienda one
+}
+		.button {
+		  background-color: #f44336;
+		  border: none;
+		  color: white;
+		  padding: 15px 32px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 16px;
+}
+		input[type=text] {
+		  border:2px solid Violet;
+			width:200px;
+
+}
+    input[type=email]{
+			border:2px solid Violet;
+			width:200px;
+		}
+		#navbar {
+			position:fixed;
+			z-index: 1;
+			width: 100%;
+		}
+		.titlu {
+			position:relative;
+			top: 50px;
+		}
+	</style>
+</head>
+
+
+  <body>
+
+    <header>
+			<nav id="navbar" class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+			<a style="font-size: 20px; font-family: Merienda One;" class="navbar-brand" href="./">Home</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<p>
+						<a  style="font-size: 20px; font-family: Merienda One;"href='/' class="btn btn-default btn-lg">Home <span class="glyphicon glyphicon-home"></span></a>
+					</li>
+					<li class="nav-item">
+						<a style="font-size: 20px; font-family: Merienda One;" href='/blog/' class="btn btn-default btn-lg">Forum <span class="glyphicon glyphicon-book"></span></a>
+					</li>
+				<li>
+				<a style="font-size: 20px; font-family: Merienda One;" href='/contact/' class="btn btn-default btn-lg">Contact<span class="glyphicon glyphicon-envelope"></span></a>
+			</li>
+			<li>
+				<a style="font-size: 20px; font-family: Merienda One;" href='/Album/' class="btn btn-default btn-lg">Album <span class="glyphicon glyphicon-camera"></span></a>
+			</li>
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				</form>
+			</div>
+			</nav>
+    </header>
+
+	<body class="body" style="background-color:#f6f6f6">
+	<div class="container-fluid" style="min-height:95%; ">
+		<div class="row">
+			  <div class="col-sm-2">
+				  <br>
+				  <center>
+					<img class="titlu" src="{% static 'Blog/img/profile.jpg' %}" class="responsive-img" style='max-height:100px;' alt="fat boyo">
+					<img class="titlu" src="{% static 'Blog/img/Codrea.jpg' %}" class="responsive-img" style='max-height:100px;' alt="even fatter boyo">
+				  </center>
+			  </div>
+			  <div class="col-sm-10">
+				  <br>
+				  <center>
+				  <h1 class="titlu">INCA NU AM UN NUME :(</h3>
+				  </center>
+			  </div>
+		</div><hr>
+
+			<div class='container-fluid'>
+			<br><br>
+{% block content %}
+{% endblock %}
+			</div>
+		  </div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="container-fluid" style='margin-left:15px'>
+			<p><a href="#" target="blank">Contact</a> | <a href="#" target="blank">LinkedIn</a> | <a href="https://www.instagram.com/?hl=ro" target="blank">Instagram</a> | <a href="https://plus.google.com" target="blank">Google+</a></p>
+		</div>
+	</footer>
+
+</body>
+
+</html>
